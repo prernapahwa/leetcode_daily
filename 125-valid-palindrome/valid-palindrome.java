@@ -1,8 +1,8 @@
 class Solution {
     public boolean isPalindrome(String s) {
-        String extract = "";
+        // String extract = "";
         // s = s.toLowerCase();
-        extract = s.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
+        s = s.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
         // for(int i = 0; i < s.length(); i++) {
         //     if(s.charAt(i) <= 'z' && s.charAt(i) >= 'a') {
         //         extract += s.charAt(i);
@@ -11,9 +11,9 @@ class Solution {
         //amanaplanacanalpanama
         //check palindrome
         int left = 0;
-        int right = extract.length()-1;
+        int right = s.length()-1;
         while(left < right) {
-            if(extract.charAt(left) != extract.charAt(right)) {
+            if(s.charAt(left) != s.charAt(right)) {
                 return false;
             }
             else {
