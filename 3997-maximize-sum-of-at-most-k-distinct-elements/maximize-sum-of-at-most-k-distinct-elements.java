@@ -3,7 +3,6 @@ class Solution {
         Arrays.sort(nums);
         int max = 0;
         int[] ans = new int[k];
-        // ans[0] = max;
         int counter = 0;  
         for (int i=nums.length-1; i>=0 ; i--) {
             if(nums[i] != max) {
@@ -15,6 +14,8 @@ class Solution {
                 break;
             }
         }
-        return Arrays.copyOf(ans, counter);
+        int [] ans2 =  Arrays.copyOf(ans, counter);
+        // return Arrays.copyOf(ans, counter);
+        return ans2;
     }
 }
